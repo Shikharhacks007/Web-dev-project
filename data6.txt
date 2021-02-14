@@ -1,1 +1,1 @@
-Check out EduBuddy: " + "https://edu-buddy.herokuapp.com/
+Check out EduBuddy: https://edu-buddy.herokuapp.com/
