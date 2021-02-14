@@ -1,3 +1,6 @@
+from googlesearch import search 
+
+
 import json
 import string
 import warnings
@@ -31,6 +34,18 @@ def make_reply(msg):
     if(msg[0] == "/"):
         if(msg == "/start"):
             reply = "hey there, let's get started"
+        elif("/search" in msg):
+                reply1 = "sure!, here you go: "
+                query =  msg
+                print(query," is query")
+                query = query.replace("/search","")
+                print(query," is query")
+                query = "https://www.iiitd.ac.in:" + query
+                print(query," is query")
+                for j in search(query, tld="co.in", num=1, stop=1, pause=2): 
+                    print(j)
+                    reply1 = reply1+j
+                return reply1
         elif(msg == "/help"):
             reply = "have a look at our documentations"
         else:
