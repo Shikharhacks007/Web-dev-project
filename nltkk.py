@@ -58,17 +58,21 @@ def execute(text):
             
     if(len(insight)==0):return None
     index = searchmodule.searching(insight)
+    print(index)
+    line = None
     if(index!= None):
-        print(index)
-        y = str(index)
-        x = "data"+ str(index) +".txt"
-        f = open(x, "r")
-        line = f.read()
-        f.close()
-    elif(index == 8):
-        line = "No issues!"
+        if index == 8:
+            line = "Check out EduBuddy: " + "https://edu-buddy.herokuapp.com/"
+        else:
+            line = index
+            # y = str(index)
+            # x = "data"+ str(index) +".txt"
+            # f = open(x, "r")
+            # line = f.read()
+            # f.close() 
     else:
         line = "Sorry, I didn't understand. Rephrase and ask again"
+    print(line)   
     return line
 
 

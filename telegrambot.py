@@ -1,10 +1,8 @@
 import json
 import string
 import warnings
+import intermediate
 import requests
-import nltkk
-import searchmodule
-from googlesearch import search 
 warnings.filterwarnings("ignore")
 
 class telegram_bot():
@@ -29,34 +27,8 @@ class telegram_bot():
 tbot = telegram_bot()
 update_id = None
 def make_reply(msg):
-    if(msg[0] == "/"):
-        if(msg == "/start"):
-            reply = "hey there, let's get started"
-        elif("/search" in msg):
-                reply = "Sure!, here you go: "
-                query =  msg
-                query = "https://www.iiitd.ac.in:" + query.replace("/search","")
-                for j in search(query, tld="co.in", num=1, stop=1, pause=2):
-                    reply = reply+j
-                return reply
-        elif(msg == "/help"):
-            reply = "have a look at our documentations"
-        else:
-            reply = "lemme have a look..."
-    elif msg == "heemank":
-        reply = "yeah bro ?"
-    elif msg in ['Thanks',"thanks", 'Thank','you', 'bunch', 'a', 'lot', 'very',"thx","thnx", ' so' ,'much']:
-        reply = "no problem"
-    else:
-        #reply = " hey"
-        try:
-            reply = nltkk.execute(msg)
-        except:
-            reply = "Unsupported"
-            
-    if(reply == None):
-        reply = ""
-    return reply
+    value = intermediate.reply(msg)
+    return value
        
 while True:
     print("...")

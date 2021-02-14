@@ -1,5 +1,3 @@
-start5
+Swimming pool
 explainition of swimming pool
-blah blah
-blah
-end5
+Swimming pool is currently closed.
