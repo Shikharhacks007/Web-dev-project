@@ -7,7 +7,7 @@ warnings.filterwarnings("ignore")
 
 class telegram_bot():
     def __init__(self):
-        self.token = "1612346045:AAFiGHWYWr3rPhCdvQ8m6mTosVV4QxwofbA"  
+        self.token = "  <Token Value Goes Here"  
         self.url = f"https://api.telegram.org/bot{self.token}"
     def get_updates(self,offset=None):
         url = self.url+"/getUpdates?timeout=100"    
