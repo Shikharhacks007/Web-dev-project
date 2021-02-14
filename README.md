@@ -1,5 +1,6 @@
 # Web-dev-project
-
+F:\Codes\Web-dev-project\logo.png
+![alt text](https://github.com/[Shikharhacks007]/[Web-dev-project]/blob/logo.png?raw=true)
 Studying online comes with a new set of challenges. According to us, the biggest problems that we faced are:  
 Organising all the study material posted on Google classroom (including sources posted in comments and elsewhere) and getting them at one place.
 Searching for a particular topic or keyword from the video lectures and slides.
