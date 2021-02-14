@@ -20,8 +20,10 @@ def reply(msg):
     elif msg.lower() == "thanks":
         reply = "no problem"
     else:
+        print("going for recog.")
         line = nltkk.execute(msg)
         try:
+            print(line,"vfdvf")
             if type(line) is int:
                 x = "data"+ str(line) +".txt"
                 f = open(x, "r")
@@ -34,7 +36,3 @@ def reply(msg):
     if(reply == None):
         reply = ""
     return reply
-
-
-x = "swimming pool"
-print(reply(x))

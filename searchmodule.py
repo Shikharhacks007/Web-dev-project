@@ -8,13 +8,11 @@ def searching(mylist):
     field = ["ground","field","cricket","stadium","stadiums", "courts" , " basketball", "infrastruture"] #3
     incubation = ["incubation", "incube" , "incub" , "centre","center" , "benifits","benifit" , "special"] #4
     swimpool = ["swim", "swimming","pool" , "pools","water" , "backstroke"] #5
-    greetings = ['Hey', 'Hello', 'hi', 'It"s', 'great', 'to', 'see', 'you', 'Nice', 'Good', "hey"] #6
-    bye = ['Bye', 'Goodbye',"good", 'Have','a' ,'day','Stop'] #7
-    edubuddy = ['edu',"buddy","education", 'pdf','transcript','lecture', 'search', 'download','help','lectures','lect.','iiitd','classroom','google', 'syllabus','course'] #8
+    edubuddy = ['edubuddy',"education","edubuddi" ,'lecture', 'download','help','lectures','iiitd','classroom','google', 'syllabus','course'] #6
 
-    checklist = [ game , library, infrastruture , field , incubation, swimpool, greetings, bye,edubuddy]
+    checklist = [ game , library, infrastruture , field , incubation, swimpool,edubuddy]
 
-    matches = [0,0,0,0,0,0,0,0,0]
+    matches = [0,0,0,0,0,0,0]
     for u in insights:
         for j in checklist:
             for k in j:

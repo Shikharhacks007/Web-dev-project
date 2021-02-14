@@ -55,21 +55,14 @@ def execute(text):
             insight.append(token.text)
         elif token.pos_ =="ADJ":
             insight.append(token.text)
-            
-    if(len(insight)==0):return None
+    print(insight,"is it ias")
+    if(len(insight)==0):
+        return None
     index = searchmodule.searching(insight)
-    print(index)
+    print(index," is index")
     line = None
     if(index!= None):
-        if index == 8:
-            line = "Check out EduBuddy: " + "https://edu-buddy.herokuapp.com/"
-        else:
-            line = index
-            # y = str(index)
-            # x = "data"+ str(index) +".txt"
-            # f = open(x, "r")
-            # line = f.read()
-            # f.close() 
+        line = index
     else:
         line = "Sorry, I didn't understand. Rephrase and ask again"
     print(line)   
