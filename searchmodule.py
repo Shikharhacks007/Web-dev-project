@@ -8,7 +8,7 @@ def searching(mylist):
     field = ["ground","field","cricket","stadium","stadiums", "courts" , " basketball", "infrastruture"] #3
     incubation = ["incubation", "incube" , "incub" , "centre","center" , "benifits","benifit" , "special"] #4
     swimpool = ["swim", "swimming","pool" , "pools","water" , "backstroke"] #5
-    edubuddy = ['edubuddy',"education","edubuddi" ,'lecture', 'download','help','lectures','iiitd','classroom','google', 'syllabus','course'] #6
+    edubuddy = ['edubuddy',"education","edubuddi" ,'lecture',"lectur","googl", 'download','help','lectures','iiitd','classroom','google', 'syllabus','course'] #6
 
     checklist = [ game , library, infrastruture , field , incubation, swimpool,edubuddy]
 
