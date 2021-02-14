@@ -1,12 +1,10 @@
-from googlesearch import search 
-
-
 import json
 import string
 import warnings
 import requests
 import nltkk
 import searchmodule
+from googlesearch import search 
 warnings.filterwarnings("ignore")
 
 class telegram_bot():
@@ -35,27 +33,27 @@ def make_reply(msg):
         if(msg == "/start"):
             reply = "hey there, let's get started"
         elif("/search" in msg):
-                reply1 = "sure!, here you go: "
+                reply = "Sure!, here you go: "
                 query =  msg
-                print(query," is query")
-                query = query.replace("/search","")
-                print(query," is query")
-                query = "https://www.iiitd.ac.in:" + query
-                print(query," is query")
-                for j in search(query, tld="co.in", num=1, stop=1, pause=2): 
-                    print(j)
-                    reply1 = reply1+j
-                return reply1
+                query = "https://www.iiitd.ac.in:" + query.replace("/search","")
+                for j in search(query, tld="co.in", num=1, stop=1, pause=2):
+                    reply = reply+j
+                return reply
         elif(msg == "/help"):
             reply = "have a look at our documentations"
         else:
-            reply = "lemme have a look"
+            reply = "lemme have a look..."
     elif msg == "heemank":
         reply = "yeah bro ?"
+    elif msg in ['Thanks',"thanks", 'Thank','you', 'bunch', 'a', 'lot', 'very',"thx","thnx", ' so' ,'much']:
+        reply = "no problem"
     else:
-        #reply = "hey!"
-        reply = nltkk.execute(msg)
-    
+        #reply = " hey"
+        try:
+            reply = nltkk.execute(msg)
+        except:
+            reply = "Unsupported"
+            
     if(reply == None):
         reply = ""
     return reply
@@ -68,13 +66,30 @@ while True:
     if updates:
         for item in updates:
             update_id = item["update_id"]
-            print(update_id)
             try:
-                message = item["message"]["text"]
-                print("Message :", message)
-            except:
-                print("Message :", None)
-
-            from_ = item["message"]["from"]["id"]
-            reply = make_reply(message)
-            tbot.send_message(reply,from_)
+                try:
+                    message = item["message"]["text"]
+                    print("Message :", message)
+                    from_ = item["message"]["from"]["id"]
+                    reply = make_reply(message)
+                    tbot.send_message(reply,from_)
+                
+                except:
+                    message = item["edited_message"]["text"]
+                    print("Message :", message)
+                    from_ = item["edited_message"]["from"]["id"]
+                    reply = make_reply(message)
+                    tbot.send_message(reply,from_)
+                
+            except:              
+                try:
+                    message = None
+                    from_ = item["message"]["from"]["id"]
+                    print("ID: " , from_)
+                    tbot.send_message("pardon?",from_)
+                
+                except:
+                    message = None
+                    from_ = item["edited_message"]["from"]["id"]
+                    print("ID: " , from_)
+                    tbot.send_message("pardon?",from_)
