@@ -1,0 +1,113 @@
+#main {
+    resize: both;
+    overflow: auto;
+  }
+
+
+.logo{
+
+    /* padding: 400px 350px; */
+    
+    position: absolute;
+
+
+  }
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .button1 {
+    background-color: rgb(41, 16, 184); 
+    width: 40%;
+    height: 40%;
+    /* padding: 400px 350px; */
+    color: rgb(241, 211, 111); 
+    border: 2px solid #4CAF50;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    text-align: center;
+  }
+  
+  .button1:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  .button1 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button1 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button1:hover span {
+    padding-right: 40px;
+  }
+  
+  .button1:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  
+  .button2 {
+    background-color: white;
+    width: 40%; 
+    height: 40%;
+    /* padding: 400px 350px; */
+    color: black; 
+    border: 2px solid #008CBA;
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    text-align: center;
+  }
+  
+  .button2:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+  
+  .button2 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button2 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button2:hover span {
+    padding-right: 40px;
+  }
+  
+  .button2:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
