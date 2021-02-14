@@ -1,5 +1,5 @@
 # SeeKer
-![alt text](https://raw.githubusercontent.com/Shikharhacks007/Web-dev-project/path/to/logo.png)
+![alt text](https://raw.githubusercontent.com/Shikharhacks007/Web-dev-project/main/logo.png)
 
 Studying online comes with a new set of challenges. According to us, the biggest problems that we faced are:  
 Organising all the study material posted on Google classroom (including sources posted in comments and elsewhere) and getting them at one place.
