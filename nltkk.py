@@ -55,17 +55,15 @@ def execute(text):
             insight.append(token.text)
         elif token.pos_ =="ADJ":
             insight.append(token.text)
-    print(insight,"is it ias")
+    print(insight)
     if(len(insight)==0):
         return None
     index = searchmodule.searching(insight)
-    print(index," is index")
     line = None
     if(index!= None):
         line = index
     else:
         line = "Sorry, I didn't understand. Rephrase and ask again"
-    print(line)   
     return line
 
 
