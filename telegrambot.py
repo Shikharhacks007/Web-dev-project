@@ -2,11 +2,13 @@ import json
 import string
 import warnings
 import requests
+import nltkk
+import searchmodule
 warnings.filterwarnings("ignore")
 
 class telegram_bot():
     def __init__(self):
-        self.token = "1641823012:AAEqUcEKo3_3XuN-o2ST1TGwXrH8M2N8dsc"  
+        self.token = "1612346045:AAFiGHWYWr3rPhCdvQ8m6mTosVV4QxwofbA"  
         self.url = f"https://api.telegram.org/bot{self.token}"
     def get_updates(self,offset=None):
         url = self.url+"/getUpdates?timeout=100"    
@@ -25,14 +27,22 @@ class telegram_bot():
 # main file 
 tbot = telegram_bot()
 update_id = None
-def make_reply(msg):   
-    reply = None
-    if msg == "heemank":
+def make_reply(msg):
+    if(msg[0] == "/"):
+        if(msg == "/start"):
+            reply = "hey there, let's get started"
+        elif(msg == "/help"):
+            reply = "have a look at our documentations"
+        else:
+            reply = "lemme have a look"
+    elif msg == "heemank":
         reply = "yeah bro ?"
-    elif msg is not None:
-        reply1 = "Currently under construction: "
-        reply2 = input("Enter a personalized message for user: ")
-        reply =reply1 + reply2
+    else:
+        #reply = "hey!"
+        reply = nltkk.execute(msg)
+    
+    if(reply == None):
+        reply = ""
     return reply
        
 while True:
@@ -53,7 +63,3 @@ while True:
             from_ = item["message"]["from"]["id"]
             reply = make_reply(message)
             tbot.send_message(reply,from_)
-            
-            
-
-
