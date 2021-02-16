@@ -10,7 +10,8 @@ EDUbuddy spans the gap between Online education and Learning by:
 Grouping all the material on google classroom into one Drive folder for each subject separately.
 Extracting specific sections of a video for a specific topic or keyword.
 
-We could not keep the entire project in one repo as it partially used Django and partially Flask
+We could not keep the entire project in one repo as it partially used Django and partially Flask.
+
 Link to EDUBuddy repo: [https://github.com/devmrfitz/edu-buddy/](https://github.com/devmrfitz/edu-buddy/)
 
 Seekerbot caters to satisfy our hunger for answers about queries related to our Institution.  
